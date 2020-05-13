@@ -1,0 +1,10 @@
+﻿[*.cs]
+
+# CA1303: Ne pas passer de littéraux en paramètres localisés
+dotnet_diagnostic.CA1303.severity = silent
+
+# CA1031: Ne pas intercepter les types d'exception générale
+dotnet_diagnostic.CA1031.severity = silent
+
+# CA1051: Ne pas déclarer de champs d'instances visibles
+dotnet_diagnostic.CA1051.severity = silent

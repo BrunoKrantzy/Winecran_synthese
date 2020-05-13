@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.9.8\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props" Condition="Exists('packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.9.8\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props')" />
+  <Import Project="packages\Microsoft.NetCore.Analyzers.2.9.8\build\Microsoft.NetCore.Analyzers.props" Condition="Exists('packages\Microsoft.NetCore.Analyzers.2.9.8\build\Microsoft.NetCore.Analyzers.props')" />
+  <Import Project="packages\Microsoft.CodeQuality.Analyzers.2.9.8\build\Microsoft.CodeQuality.Analyzers.props" Condition="Exists('packages\Microsoft.CodeQuality.Analyzers.2.9.8\build\Microsoft.CodeQuality.Analyzers.props')" />
+  <Import Project="packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.8\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props" Condition="Exists('packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.8\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props')" />
+  <Import Project="packages\Microsoft.NetFramework.Analyzers.2.9.8\build\Microsoft.NetFramework.Analyzers.props" Condition="Exists('packages\Microsoft.NetFramework.Analyzers.2.9.8\build\Microsoft.NetFramework.Analyzers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6B9CB50D-EC0F-42B4-9925-1187DB8BA717}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WinecranFormsApp</RootNamespace>
+    <AssemblyName>Winecran</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>winecran.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>WinecranFormsApp.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EcranCZS.cs" />
+    <Compile Include="FonctionsWinecran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAbandonCreation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAbandonCreation.Designer.cs">
+      <DependentUpon>FormAbandonCreation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAbout.Designer.cs">
+      <DependentUpon>FormAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAccueil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAccueil.Designer.cs">
+      <DependentUpon>FormAccueil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLicenceWinecran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLicenceWinecran.Designer.cs">
+      <DependentUpon>FormLicenceWinecran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSaisieSonShape.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSaisieSonShape.Designer.cs">
+      <DependentUpon>FormSaisieSonShape.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSauvegardeCreation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSauvegardeCreation.Designer.cs">
+      <DependentUpon>FormSauvegardeCreation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WinShape.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="FormAbandonCreation.resx">
+      <DependentUpon>FormAbandonCreation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAbout.resx">
+      <DependentUpon>FormAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAccueil.resx">
+      <DependentUpon>FormAccueil.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLicenceWinecran.resx">
+      <DependentUpon>FormLicenceWinecran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSaisieSonShape.resx">
+      <DependentUpon>FormSaisieSonShape.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSauvegardeCreation.resx">
+      <DependentUpon>FormSauvegardeCreation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include=".editorconfig" />
+    <None Include="ecrans\alphabet.czs" />
+    <None Include="ecrans\animaux.czs" />
+    <None Include="ecrans\chateaux.czs" />
+    <None Include="ecrans\drapeaux.czs" />
+    <None Include="ecrans\gamme.czs" />
+    <None Include="ecrans\villes.czs" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ressources\jouer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ressources\decouverte.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ressources\winlogo.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ressources\about.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.8\analyzers\dotnet\cs\Microsoft.CodeAnalysis.VersionCheckAnalyzer.resources.dll" />
+    <Analyzer Include="packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.8\analyzers\dotnet\Microsoft.CodeAnalysis.VersionCheckAnalyzer.dll" />
+    <Analyzer Include="packages\Microsoft.CodeQuality.Analyzers.2.9.8\analyzers\dotnet\cs\Humanizer.dll" />
+    <Analyzer Include="packages\Microsoft.CodeQuality.Analyzers.2.9.8\analyzers\dotnet\cs\Microsoft.CodeQuality.Analyzers.dll" />
+    <Analyzer Include="packages\Microsoft.CodeQuality.Analyzers.2.9.8\analyzers\dotnet\cs\Microsoft.CodeQuality.CSharp.Analyzers.dll" />
+    <Analyzer Include="packages\Microsoft.NetCore.Analyzers.2.9.8\analyzers\dotnet\cs\Microsoft.NetCore.Analyzers.dll" />
+    <Analyzer Include="packages\Microsoft.NetCore.Analyzers.2.9.8\analyzers\dotnet\cs\Microsoft.NetCore.CSharp.Analyzers.dll" />
+    <Analyzer Include="packages\Microsoft.NetFramework.Analyzers.2.9.8\analyzers\dotnet\cs\Microsoft.NetFramework.Analyzers.dll" />
+    <Analyzer Include="packages\Microsoft.NetFramework.Analyzers.2.9.8\analyzers\dotnet\cs\Microsoft.NetFramework.CSharp.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ressources\ecouter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ressources\savefile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ressources\dossier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ressources\dessiner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ressources\aide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ressources\questions.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ecrans\alphabet\A.WAV" />
+    <Content Include="ecrans\alphabet\ALPHA800.BMP" />
+    <Content Include="ecrans\alphabet\B.WAV" />
+    <Content Include="ecrans\alphabet\BRAVO1.WAV" />
+    <Content Include="ecrans\alphabet\C.WAV" />
+    <Content Include="ecrans\alphabet\D.WAV" />
+    <Content Include="ecrans\alphabet\E.WAV" />
+    <Content Include="ecrans\alphabet\ERREUR1.WAV" />
+    <Content Include="ecrans\alphabet\F.WAV" />
+    <Content Include="ecrans\alphabet\G.WAV" />
+    <Content Include="ecrans\alphabet\H.WAV" />
+    <Content Include="ecrans\alphabet\I.WAV" />
+    <Content Include="ecrans\alphabet\J.WAV" />
+    <Content Include="ecrans\alphabet\K.WAV" />
+    <Content Include="ecrans\alphabet\L.WAV" />
+    <Content Include="ecrans\alphabet\M.WAV" />
+    <Content Include="ecrans\alphabet\N.WAV" />
+    <Content Include="ecrans\alphabet\O.WAV" />
+    <Content Include="ecrans\alphabet\P.WAV" />
+    <Content Include="ecrans\alphabet\Q.WAV" />
+    <Content Include="ecrans\alphabet\QUESTION.WAV" />
+    <Content Include="ecrans\alphabet\R.WAV" />
+    <Content Include="ecrans\alphabet\S.WAV" />
+    <Content Include="ecrans\alphabet\T.WAV" />
+    <Content Include="ecrans\alphabet\U.WAV" />
+    <Content Include="ecrans\alphabet\V.WAV" />
+    <Content Include="ecrans\alphabet\W.WAV" />
+    <Content Include="ecrans\alphabet\X.WAV" />
+    <Content Include="ecrans\alphabet\Y.WAV" />
+    <Content Include="ecrans\alphabet\Z.WAV" />
+    <Content Include="ecrans\animaux\animaux.jpg" />
+    <Content Include="ecrans\animaux\chat.wav" />
+    <Content Include="ecrans\animaux\cheval.wav" />
+    <Content Include="ecrans\animaux\chien.wav" />
+    <Content Include="ecrans\animaux\elephant.wav" />
+    <Content Include="ecrans\animaux\erreur.wav" />
+    <Content Include="ecrans\animaux\exact.wav" />
+    <Content Include="ecrans\animaux\herisson.wav" />
+    <Content Include="ecrans\animaux\lion.wav" />
+    <Content Include="ecrans\animaux\oiseau.wav" />
+    <Content Include="ecrans\animaux\papillon.wav" />
+    <Content Include="ecrans\animaux\poisson.wav" />
+    <Content Include="ecrans\animaux\question.wav" />
+    <Content Include="ecrans\animaux\serpent.wav" />
+    <Content Include="ecrans\animaux\singe.wav" />
+    <Content Include="ecrans\animaux\vache.wav" />
+    <Content Include="ecrans\chateaux\amboise.wav" />
+    <Content Include="ecrans\chateaux\azay.wav" />
+    <Content Include="ecrans\chateaux\blois.wav" />
+    <Content Include="ecrans\chateaux\chambord.wav" />
+    <Content Include="ecrans\chateaux\chateaux.bmp" />
+    <Content Include="ecrans\chateaux\chenonceau.wav" />
+    <Content Include="ecrans\chateaux\cheverny.wav" />
+    <Content Include="ecrans\chateaux\chinon.wav" />
+    <Content Include="ecrans\chateaux\erreur.wav" />
+    <Content Include="ecrans\chateaux\exact.wav" />
+    <Content Include="ecrans\chateaux\langeais.wav" />
+    <Content Include="ecrans\chateaux\qchateaux.wav" />
+    <Content Include="ecrans\chateaux\usse.wav" />
+    <Content Include="ecrans\chateaux\villandry.wav" />
+    <Content Include="ecrans\drapeaux\AFRIQSUD.WAV" />
+    <Content Include="ecrans\drapeaux\ALBANIE.WAV" />
+    <Content Include="ecrans\drapeaux\ALGERIE.WAV" />
+    <Content Include="ecrans\drapeaux\ALLEMAGN.WAV" />
+    <Content Include="ecrans\drapeaux\AUTRICHE.WAV" />
+    <Content Include="ecrans\drapeaux\BOSNIE.WAV" />
+    <Content Include="ecrans\drapeaux\BRESIL.WAV" />
+    <Content Include="ecrans\drapeaux\CHINE.WAV" />
+    <Content Include="ecrans\drapeaux\COREESUD.WAV" />
+    <Content Include="ecrans\drapeaux\DRAPO640.BMP" />
+    <Content Include="ecrans\drapeaux\EGYPTE.WAV" />
+    <Content Include="ecrans\drapeaux\ERREUR.WAV" />
+    <Content Include="ecrans\drapeaux\ESPAGNE.WAV" />
+    <Content Include="ecrans\drapeaux\EXACTE.WAV" />
+    <Content Include="ecrans\drapeaux\FINLANDE.WAV" />
+    <Content Include="ecrans\drapeaux\FRANCE.WAV" />
+    <Content Include="ecrans\drapeaux\GBRETAGN.WAV" />
+    <Content Include="ecrans\drapeaux\GRECE.WAV" />
+    <Content Include="ecrans\drapeaux\HONGRIE.WAV" />
+    <Content Include="ecrans\drapeaux\INDE.WAV" />
+    <Content Include="ecrans\drapeaux\ISLANDE.WAV" />
+    <Content Include="ecrans\drapeaux\ISRAEL.WAV" />
+    <Content Include="ecrans\drapeaux\ITALIE.WAV" />
+    <Content Include="ecrans\drapeaux\JAPON.WAV" />
+    <Content Include="ecrans\drapeaux\KENYA.WAV" />
+    <Content Include="ecrans\drapeaux\MAROC.WAV" />
+    <Content Include="ecrans\drapeaux\NORVEGE.WAV" />
+    <Content Include="ecrans\drapeaux\PAYSBAS.WAV" />
+    <Content Include="ecrans\drapeaux\POLOGNE.WAV" />
+    <Content Include="ecrans\drapeaux\PORTUGAL.WAV" />
+    <Content Include="ecrans\drapeaux\QDRAPO.WAV" />
+    <Content Include="ecrans\drapeaux\RUSSIE.WAV" />
+    <Content Include="ecrans\drapeaux\SUEDE.WAV" />
+    <Content Include="ecrans\drapeaux\TURQUIE.WAV" />
+    <Content Include="ecrans\gamme\BRAVO1.WAV" />
+    <Content Include="ecrans\gamme\BRAVO2.WAV" />
+    <Content Include="ecrans\gamme\DO.WAV" />
+    <Content Include="ecrans\gamme\DOH.WAV" />
+    <Content Include="ecrans\gamme\ERREUR2.WAV" />
+    <Content Include="ecrans\gamme\FA.WAV" />
+    <Content Include="ecrans\gamme\GAMME640.BMP" />
+    <Content Include="ecrans\gamme\LA.WAV" />
+    <Content Include="ecrans\gamme\MI.WAV" />
+    <Content Include="ecrans\gamme\QUESTGAM.WAV" />
+    <Content Include="ecrans\gamme\RE.WAV" />
+    <Content Include="ecrans\gamme\SI.WAV" />
+    <Content Include="ecrans\gamme\SOL.WAV" />
+    <Content Include="ecrans\villes\AJACCIO.WAV" />
+    <Content Include="ecrans\villes\ALENCON.WAV" />
+    <Content Include="ecrans\villes\AMIENS.WAV" />
+    <Content Include="ecrans\villes\ANGERS.WAV" />
+    <Content Include="ecrans\villes\ARRAS.WAV" />
+    <Content Include="ecrans\villes\AVIGNON.WAV" />
+    <Content Include="ecrans\villes\BASTIA.WAV" />
+    <Content Include="ecrans\villes\BAYONNE.WAV" />
+    <Content Include="ecrans\villes\BELFORT.WAV" />
+    <Content Include="ecrans\villes\BORDEAUX.WAV" />
+    <Content Include="ecrans\villes\BREST.WAV" />
+    <Content Include="ecrans\villes\CAEN.WAV" />
+    <Content Include="ecrans\villes\CALAIS.WAV" />
+    <Content Include="ecrans\villes\CARTE800.BMP" />
+    <Content Include="ecrans\villes\CLERMONT.WAV" />
+    <Content Include="ecrans\villes\DIJON.WAV" />
+    <Content Include="ecrans\villes\ERREUR.WAV" />
+    <Content Include="ecrans\villes\EXACT.WAV" />
+    <Content Include="ecrans\villes\GRENOBLE.WAV" />
+    <Content Include="ecrans\villes\HAVRE.WAV" />
+    <Content Include="ecrans\villes\LILLE.WAV" />
+    <Content Include="ecrans\villes\LYON.WAV" />
+    <Content Include="ecrans\villes\MARSEILL.WAV" />
+    <Content Include="ecrans\villes\METZ.WAV" />
+    <Content Include="ecrans\villes\MULHOUSE.WAV" />
+    <Content Include="ecrans\villes\NANCY.WAV" />
+    <Content Include="ecrans\villes\NANTES.WAV" />
+    <Content Include="ecrans\villes\NARBONNE.WAV" />
+    <Content Include="ecrans\villes\NEVERS.WAV" />
+    <Content Include="ecrans\villes\NICE.WAV" />
+    <Content Include="ecrans\villes\ORLEANS.WAV" />
+    <Content Include="ecrans\villes\PARIS.WAV" />
+    <Content Include="ecrans\villes\PERIGUEU.WAV" />
+    <Content Include="ecrans\villes\PERPIGNA.WAV" />
+    <Content Include="ecrans\villes\POITIERS.WAV" />
+    <Content Include="ecrans\villes\QVILLE.WAV" />
+    <Content Include="ecrans\villes\RENNES.WAV" />
+    <Content Include="ecrans\villes\ROCHELLE.WAV" />
+    <Content Include="ecrans\villes\RODEZ.WAV" />
+    <Content Include="ecrans\villes\ROUEN.WAV" />
+    <Content Include="ecrans\villes\SETIENNE.WAV" />
+    <Content Include="ecrans\villes\STRASBOU.WAV" />
+    <Content Include="ecrans\villes\TOULON.WAV" />
+    <Content Include="ecrans\villes\TOULOUSE.WAV" />
+    <Content Include="ecrans\villes\TOURS.WAV" />
+    <Content Include="ecrans\villes\TROYES.WAV" />
+    <Content Include="winecran.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 et x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Ce projet fait référence à des packages NuGet qui sont manquants sur cet ordinateur. Utilisez l'option de restauration des packages NuGet pour les télécharger. Pour plus d'informations, consultez http://go.microsoft.com/fwlink/?LinkID=322105. Le fichier manquant est : {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.NetFramework.Analyzers.2.9.8\build\Microsoft.NetFramework.Analyzers.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.NetFramework.Analyzers.2.9.8\build\Microsoft.NetFramework.Analyzers.props'))" />
+    <Error Condition="!Exists('packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.8\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.8\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props'))" />
+    <Error Condition="!Exists('packages\Microsoft.CodeQuality.Analyzers.2.9.8\build\Microsoft.CodeQuality.Analyzers.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeQuality.Analyzers.2.9.8\build\Microsoft.CodeQuality.Analyzers.props'))" />
+    <Error Condition="!Exists('packages\Microsoft.NetCore.Analyzers.2.9.8\build\Microsoft.NetCore.Analyzers.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.NetCore.Analyzers.2.9.8\build\Microsoft.NetCore.Analyzers.props'))" />
+    <Error Condition="!Exists('packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.9.8\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.9.8\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props'))" />
+  </Target>
+</Project>
